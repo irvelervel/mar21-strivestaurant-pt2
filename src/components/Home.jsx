@@ -2,6 +2,7 @@ import React from 'react'
 import { Carousel, Col, Container, Row } from 'react-bootstrap'
 import items from '../data/menu.json'
 import DishComments from './DishComments'
+import ReservationForm from './ReservationForm'
 
 // .map
 // we need to work with the state object to keep track of which dish we selected
@@ -32,7 +33,7 @@ class Home extends React.Component {
             <Container>
                 {/* <div class="container" /> */}
                 <Row className="justify-content-center mt-3">
-                    <Col xs={12} md={6}>
+                    <Col xs={12} md={8}>
                         {/* <div class="col col-xs-12 col-md-6">
                                 COL CONTENT
                             </div>
@@ -67,8 +68,13 @@ class Home extends React.Component {
                     </Col>
                 </Row>
                 <Row className="justify-content-center mt-3">
-                    <Col xs={12} md={6}>
+                    <Col xs={12} md={8}>
                         <DishComments dish={this.state.selectedDish} marginTop={0} />
+                    </Col>
+                </Row>
+                <Row className="justify-content-center mt-3">
+                    <Col xs={12} md={8}>
+                        <ReservationForm />
                     </Col>
                 </Row>
             </Container>
